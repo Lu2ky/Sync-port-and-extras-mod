@@ -1,7 +1,4 @@
 {
-  "itemGroup.syncextra": "Example Mod Tab",
-  "block.syncextra.example_block": "Example Block",
-  "item.syncextra.example_item": "Example Item",
 
   "syncextra.configuration.title": "Sync-extra Configs",
   "syncextra.configuration.section.syncextra.common.toml": "Sync-extra Configs",
@@ -9,5 +6,8 @@
   "syncextra.configuration.items": "Item List",
   "syncextra.configuration.logDirtBlock": "Log Dirt Block",
   "syncextra.configuration.magicNumberIntroduction": "Magic Number Text",
-  "syncextra.configuration.magicNumber": "Magic Number"
+  "syncextra.configuration.magicNumber": "Magic Number",
+  "item.syncextra.sync_core": "Sync Core",
+  "block.syncextra.sync_capsule": "Sync Capsule",
+  "itemGroup.syncextra": "Sync Extra"
 }

@@ -5,7 +5,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
+import com.luky.syncextra.registry.ModBlocks;
 public class ModItems{
     public static final DeferredRegister.Items ITEMS =
             DeferredRegister.createItems(SyncExtra.MOD_ID);

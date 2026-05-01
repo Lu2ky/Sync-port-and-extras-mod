@@ -10,11 +10,15 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModBlocks{
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(SyncExtra.MOD_ID);
+
     public static final DeferredBlock<Block> SYNC_CAPSULE =
-            BLOCKS.registerSimpleBlock("Sync_capsule",
+            BLOCKS.registerSimpleBlock("sync_capsule",
                     BlockBehaviour.Properties.of()
                             .strength(3.0f,6.0f)
                             .sound(SoundType.GLASS)
                             .noOcclusion()
-                            .requiresCorrectToolForDrops());
+                            .requiresCorrectToolForDrops()
+
+                    );
+
 }
