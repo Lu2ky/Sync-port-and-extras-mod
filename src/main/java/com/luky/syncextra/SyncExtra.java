@@ -1,6 +1,7 @@
 package com.luky.syncextra;
 
 import com.luky.syncextra.client.ClientEvents;
+import com.luky.syncextra.datagen.ModBlockLootTableProvider;
 import com.luky.syncextra.registry.*;
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;

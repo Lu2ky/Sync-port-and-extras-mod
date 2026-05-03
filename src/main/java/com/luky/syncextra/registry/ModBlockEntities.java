@@ -1,7 +1,7 @@
 package com.luky.syncextra.registry;
 
 import com.luky.syncextra.SyncExtra;
-import com.luky.syncextra.block.entity.TestBlockEntity;
+import com.luky.syncextra.custom.block.entity.TestBlockEntity;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
 

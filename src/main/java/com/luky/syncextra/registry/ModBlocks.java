@@ -1,7 +1,7 @@
 package com.luky.syncextra.registry;
 
 import com.luky.syncextra.SyncExtra;
-import com.luky.syncextra.block.TestBlock;
+import com.luky.syncextra.custom.block.TestBlock;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;

@@ -27,6 +27,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.RAW_CLONEODITA);
                         output.accept(ModItems.RAW_CLONEODITA_BLOCK);
                         output.accept(ModItems.CLONEODITA_INGOT);
+                        output.accept(ModItems.CHISEL);
                     })
                     .build()
             );

@@ -1,6 +1,6 @@
 package com.luky.syncextra.menu;
 
-import com.luky.syncextra.block.entity.TestBlockEntity;
+import com.luky.syncextra.custom.block.entity.TestBlockEntity;
 import com.luky.syncextra.registry.ModMenus;
 
 import net.minecraft.core.BlockPos;

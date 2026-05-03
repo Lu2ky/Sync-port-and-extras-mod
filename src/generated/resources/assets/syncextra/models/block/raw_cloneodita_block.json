@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "syncextra:block/raw_cloneodita_block"
+  }
+}

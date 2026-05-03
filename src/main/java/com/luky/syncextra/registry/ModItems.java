@@ -3,6 +3,7 @@ package com.luky.syncextra.registry;
 
 import com.jcraft.jorbis.Block;
 import com.luky.syncextra.SyncExtra;
+import com.luky.syncextra.custom.item.ChiselItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -25,4 +26,5 @@ public class ModItems{
     public static final DeferredItem<BlockItem> RAW_CLONEODITA_BLOCK =
             ITEMS.registerSimpleBlockItem("raw_cloneodita_block",ModBlocks.RAW_CLONEODITA_BLOCK);
     public static final DeferredItem<Item> CLONEODITA_INGOT = ITEMS.registerSimpleItem("cloneodita_ingot", new Item.Properties().fireResistant());
+    public static final DeferredItem<Item> CHISEL = ITEMS.register("chisel", () -> new ChiselItem(new Item.Properties().fireResistant().durability(32)));
 }
