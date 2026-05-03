@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "syncextra:block/cloneodita_ore"
-  }
-}

@@ -6,6 +6,7 @@ import net.minecraft.client.gui.screens.recipebook.SmeltingRecipeBookComponent;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
@@ -35,5 +36,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cloneodita", has(ModItems.CLONEODITA_INGOT)).save(recipeOutput);
         oreSmelting(recipeOutput, CLONEODITA_SMELTTABLES, RecipeCategory.MISC,ModItems.CLONEODITA_INGOT,0.25f,200,"cloneodita");
         oreBlasting(recipeOutput, CLONEODITA_SMELTTABLES, RecipeCategory.MISC,ModItems.CLONEODITA_INGOT,0.25f,100,"cloneodita");
+        stairBuilder(ModBlocks.RAW_CLONEODITA_STAIRS.get(), Ingredient.of(ModBlocks.RAW_CLONEODITA_BLOCK)).group("cloneodita")
+                .unlockedBy("has_cloneodita", has(ModItems.CLONEODITA_INGOT)).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_CLONEODITA_SLAB.get(),ModBlocks.RAW_CLONEODITA_BLOCK.get());
+
+        buttonBuilder(ModBlocks.RAW_CLONEODITA_BUTTON.get(), Ingredient.of(ModItems.RAW_CLONEODITA_BLOCK.get())).group("cloneodita")
+                .unlockedBy("has_cloneodita", has(ModItems.CLONEODITA_INGOT.get())).save(recipeOutput);
+
+        pressurePlate(recipeOutput, ModBlocks.RAW_CLONEODITA_PRESSURE_PLATE.get(), ModItems.RAW_CLONEODITA_BLOCK.get());
+
+        fenceBuilder(ModBlocks.RAW_CLONEODITA_FENCE.get(), Ingredient.of(ModItems.RAW_CLONEODITA_BLOCK.get())).group("cloneodita")
+                .unlockedBy("has_cloneodita", has(ModItems.CLONEODITA_INGOT.get())).save(recipeOutput);
+
+        fenceGateBuilder(ModBlocks.RAW_CLONEODITA_FENCE_GATE.get(), Ingredient.of(ModItems.RAW_CLONEODITA_BLOCK.get())).group("cloneodita")
+                .unlockedBy("has_cloneodita", has(ModItems.CLONEODITA_INGOT.get())).save(recipeOutput);
+
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_CLONEODITA_WALL.get(), ModItems.RAW_CLONEODITA_BLOCK.get());
+
+        doorBuilder(ModBlocks.RAW_CLONEODITA_DOOR.get(), Ingredient.of(ModItems.RAW_CLONEODITA_BLOCK.get())).group("cloneodita")
+                .unlockedBy("has_cloneodita", has(ModItems.CLONEODITA_INGOT.get())).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.RAW_CLONEODITA_TRAPDOOR.get(), Ingredient.of(ModItems.RAW_CLONEODITA_BLOCK.get())).group("cloneodita")
+                .unlockedBy("has_cloneodita", has(ModItems.CLONEODITA_INGOT.get())).save(recipeOutput);
+
     }
 }

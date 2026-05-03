@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "cloneodita",
+  "key": {
+    "#": {
+      "item": "syncextra:raw_cloneodita_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "syncextra:raw_cloneodita_stairs"
+  }
+}

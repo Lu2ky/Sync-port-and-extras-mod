@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "syncextra:block/raw_cloneodita_block",
+    "side": "syncextra:block/raw_cloneodita_block",
+    "top": "syncextra:block/raw_cloneodita_block"
+  }
+}

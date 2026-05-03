@@ -28,6 +28,17 @@ public class ModCreativeTabs {
                         output.accept(ModItems.RAW_CLONEODITA_BLOCK);
                         output.accept(ModItems.CLONEODITA_INGOT);
                         output.accept(ModItems.CHISEL);
+                        output.accept(ModBlocks.RAW_CLONEODITA_FENCE_GATE);
+                        output.accept(ModBlocks.RAW_CLONEODITA_BUTTON);
+                        output.accept(ModBlocks.RAW_CLONEODITA_DOOR);
+                        output.accept(ModBlocks.RAW_CLONEODITA_SLAB);
+                        output.accept(ModBlocks.RAW_CLONEODITA_WALL);
+                        output.accept(ModBlocks.RAW_CLONEODITA_TRAPDOOR);
+                        output.accept(ModBlocks.RAW_CLONEODITA_STAIRS);
+                        output.accept(ModBlocks.RAW_CLONEODITA_PRESSURE_PLATE);
+                        output.accept(ModBlocks.RAW_CLONEODITA_FENCE);
+
+
                     })
                     .build()
             );

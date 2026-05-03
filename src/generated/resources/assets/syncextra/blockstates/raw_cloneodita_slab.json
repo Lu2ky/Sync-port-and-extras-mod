@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "syncextra:block/raw_cloneodita_slab"
+    },
+    "type=double": {
+      "model": "syncextra:block/raw_cloneodita_block"
+    },
+    "type=top": {
+      "model": "syncextra:block/raw_cloneodita_slab_top"
+    }
+  }
+}

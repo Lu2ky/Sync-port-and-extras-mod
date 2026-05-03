@@ -24,5 +24,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RAW_CLONEODITA_BLOCK.get())
                 .add(ModBlocks.CLONEODITA_ORE.get());
+        tag(BlockTags.FENCES).add(ModBlocks.RAW_CLONEODITA_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.RAW_CLONEODITA_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.RAW_CLONEODITA_WALL.get());
     }
 }

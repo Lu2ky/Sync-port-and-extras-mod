@@ -32,6 +32,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_CLONEODITA_BLOCK.get());
         dropSelf(ModBlocks.TEST_BLOCK.get());
         dropSelf(ModBlocks.SYNC_CAPSULE_MODULE.get());
+        addNonCloneoditaBlocks();
+
         /*
         Metodo default para LootTableProvider (ver clase para ver variedad)
 
@@ -54,5 +56,24 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected Iterable<Block> getKnownBlocks(){
         return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+    }
+    private void addNonCloneoditaBlocks(){
+        dropSelf(ModBlocks.RAW_CLONEODITA_BUTTON.get());
+
+        dropSelf(ModBlocks.RAW_CLONEODITA_FENCE_GATE.get());
+
+        dropSelf(ModBlocks.RAW_CLONEODITA_FENCE.get());
+
+        add(ModBlocks.RAW_CLONEODITA_DOOR.get(), block -> createDoorTable(ModBlocks.RAW_CLONEODITA_DOOR.get()));
+
+        add(ModBlocks.RAW_CLONEODITA_SLAB.get(), block-> createSlabItemTable(ModBlocks.RAW_CLONEODITA_SLAB.get()));
+
+        dropSelf(ModBlocks.RAW_CLONEODITA_WALL.get());
+
+        dropSelf(ModBlocks.RAW_CLONEODITA_STAIRS.get());
+
+        dropSelf(ModBlocks.RAW_CLONEODITA_PRESSURE_PLATE.get());
+
+        dropSelf(ModBlocks.RAW_CLONEODITA_TRAPDOOR.get());
     }
 }

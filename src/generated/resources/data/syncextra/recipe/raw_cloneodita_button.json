@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "cloneodita",
+  "ingredients": [
+    {
+      "item": "syncextra:raw_cloneodita_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "syncextra:raw_cloneodita_button"
+  }
+}

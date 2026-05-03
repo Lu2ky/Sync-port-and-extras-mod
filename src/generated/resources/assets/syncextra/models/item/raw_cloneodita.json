@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "syncextra:item/sync_core"
+    "layer0": "syncextra:item/raw_cloneodita"
   }
 }

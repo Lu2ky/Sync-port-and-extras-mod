@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "syncextra:block/raw_cloneodita_block"
+  }
+}
