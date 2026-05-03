@@ -1,6 +1,7 @@
 package com.luky.syncextra;
 
 import com.luky.syncextra.client.ClientEvents;
+import com.luky.syncextra.component.ModDataComponents;
 import com.luky.syncextra.datagen.ModBlockLootTableProvider;
 import com.luky.syncextra.registry.*;
 import com.mojang.logging.LogUtils;
@@ -23,7 +24,7 @@ public class SyncExtra {
         ModCreativeTabs.TABS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModMenus.MENUS.register(modEventBus);
-
+        ModDataComponents.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         if (FMLEnvironment.dist.isClient()) {

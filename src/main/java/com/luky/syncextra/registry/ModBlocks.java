@@ -1,6 +1,7 @@
 package com.luky.syncextra.registry;
 
 import com.luky.syncextra.SyncExtra;
+import com.luky.syncextra.custom.block.CloneoditaLamp;
 import com.luky.syncextra.custom.block.TestBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -92,6 +93,13 @@ public class ModBlocks{
         registerBlockItem(name,toReturn);
         return toReturn;
     }
+
+    public static final DeferredBlock<Block> CLONEODITA_LAMP = registerBlock("cloneodita_lamp",() -> new CloneoditaLamp(BlockBehaviour.
+            Properties.
+            of().
+            strength(2f).
+            requiresCorrectToolForDrops().
+            lightLevel(state -> state.getValue(CloneoditaLamp.CLICKED) ? 15 : 0)));
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),new Item.Properties()));

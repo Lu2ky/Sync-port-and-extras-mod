@@ -1,12 +1,14 @@
 package com.luky.syncextra.datagen;
 
 import com.luky.syncextra.SyncExtra;
+import com.luky.syncextra.custom.block.CloneoditaLamp;
 import com.luky.syncextra.registry.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -44,9 +46,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.RAW_CLONEODITA_PRESSURE_PLATE);
         blockItem(ModBlocks.RAW_CLONEODITA_FENCE_GATE);
         blockItem(ModBlocks.RAW_CLONEODITA_TRAPDOOR, "_bottom");
+        customLamp();
 
 
+    }
+    private void customLamp() {
+        getVariantBuilder(ModBlocks.CLONEODITA_LAMP.get()).forAllStates(state -> {
+            if(state.getValue(CloneoditaLamp.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("cloneodita_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(SyncExtra.MOD_ID, "block/" + "cloneodita_lamp_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("cloneodita_lamp_off",
+                        ResourceLocation.fromNamespaceAndPath(SyncExtra.MOD_ID, "block/" + "cloneodita_lamp_off")))};
+            }
+        });
 
+        simpleBlockItem(ModBlocks.CLONEODITA_LAMP.get(), models().cubeAll("cloneodita_lamp_on",
+                ResourceLocation.fromNamespaceAndPath(SyncExtra.MOD_ID, "block/" + "cloneodita_lamp_on")));
     }
     private void blockItem(DeferredBlock<?> deferredBlock){
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("syncextra:block/"+deferredBlock.getId().getPath()));

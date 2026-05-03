@@ -75,5 +75,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_CLONEODITA_PRESSURE_PLATE.get());
 
         dropSelf(ModBlocks.RAW_CLONEODITA_TRAPDOOR.get());
+
+        dropSelf(ModBlocks.CLONEODITA_LAMP.get());
     }
 }

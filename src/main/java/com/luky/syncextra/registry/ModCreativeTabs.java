@@ -37,6 +37,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.RAW_CLONEODITA_STAIRS);
                         output.accept(ModBlocks.RAW_CLONEODITA_PRESSURE_PLATE);
                         output.accept(ModBlocks.RAW_CLONEODITA_FENCE);
+                        output.accept(ModBlocks.CLONEODITA_LAMP);
 
 
                     })

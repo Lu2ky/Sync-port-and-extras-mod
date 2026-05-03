@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "syncextra:block/cloneodita_lamp_off"
+    },
+    "clicked=true": {
+      "model": "syncextra:block/cloneodita_lamp_on"
+    }
+  }
+}

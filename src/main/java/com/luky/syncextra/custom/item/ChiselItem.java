@@ -1,9 +1,11 @@
 package com.luky.syncextra.custom.item;
 
 
+import com.luky.syncextra.component.ModDataComponents;
 import com.luky.syncextra.registry.ModBlocks;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.sounds.Sound;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -50,17 +52,31 @@ public class ChiselItem extends Item {
                             context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND);
                         });
                 level.playSound(null,context.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+                context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
             }
+        }
+        else{
+            if(context.getItemInHand().get(ModDataComponents.COORDINATES) != null){
+                BlockPos coords = context.getItemInHand().get(ModDataComponents.COORDINATES);
+                if(coords != null){
+                    context.getPlayer().setPos(coords.getX(), coords.getY() + 1, coords.getZ());
+                    level.playSound(context.getPlayer(), context.getClickedPos(), SoundEvents.PORTAL_TRAVEL,SoundSource.AMBIENT);
+                }
+            }
+
         }
         return InteractionResult.SUCCESS;
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         if(Screen.hasShiftDown()){
             tooltipComponents.add(Component.translatable("tooltip.syncextra.chisel.tooltip.shift"));
         }else{
             tooltipComponents.add(Component.translatable("tooltip.syncextra.chisel.tooltip.noshift"));
+        }
+        if(stack.get(ModDataComponents.COORDINATES) != null){
+            tooltipComponents.add(Component.literal("El ultimo bloque cambiado fue: " + stack.get(ModDataComponents.COORDINATES)));
         }
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
