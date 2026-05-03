@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:",
+    "category": "misc",
+    "ingredients": [
+        { "item": "minecraft:dirt" }
+    ],
+    "result": {
+        "id": "minecraft:diamond",
+        "count": 1
+    }
+}

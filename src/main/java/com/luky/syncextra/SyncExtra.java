@@ -1,13 +1,13 @@
 package com.luky.syncextra;
 
-import com.luky.syncextra.registry.ModBlocks;
-import com.luky.syncextra.registry.ModItems;
-import com.luky.syncextra.registry.ModCreativeTabs;
+import com.luky.syncextra.client.ClientEvents;
+import com.luky.syncextra.registry.*;
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
 
 @Mod(SyncExtra.MOD_ID)
@@ -20,8 +20,15 @@ public class SyncExtra {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        ModMenus.MENUS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+
+        if (FMLEnvironment.dist.isClient()) {
+            modEventBus.addListener(ClientEvents::registerScreens);
+        }
+
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

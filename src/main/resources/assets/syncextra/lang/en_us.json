@@ -1,5 +1,4 @@
 {
-
   "syncextra.configuration.title": "Sync-extra Configs",
   "syncextra.configuration.section.syncextra.common.toml": "Sync-extra Configs",
   "syncextra.configuration.section.syncextra.common.toml.title": "Sync-extra Configs",
@@ -9,5 +8,9 @@
   "syncextra.configuration.magicNumber": "Magic Number",
   "item.syncextra.sync_core": "Sync Core",
   "block.syncextra.sync_capsule": "Sync Capsule",
-  "itemGroup.syncextra": "Sync Extra"
+  "itemGroup.syncextra": "Sync Extra",
+  "block.syncextra.cloneodita_ore": "Cloneodita Ore",
+  "item.syncextra.raw_cloneodita": "Raw Cloneodita",
+  "block.syncextra.raw_cloneodita_block": "Raw Cloneodita Block",
+  "item.syncextra.cloneodita_ingot": "Cloneodita Ingot"
 }

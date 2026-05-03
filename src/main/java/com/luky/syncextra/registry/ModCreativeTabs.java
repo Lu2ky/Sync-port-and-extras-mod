@@ -18,10 +18,15 @@ public class ModCreativeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> SYNC_TAB =
             TABS.register("sync_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.syncextra"))
-                    .icon(() -> Items.GLASS_PANE.getDefaultInstance())
+                    .icon(() -> ModItems.CLONEODITA_INGOT.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.SYNC_CAPSULE);
+                        output.accept(ModItems.SYNC_CAPSULE_MODULE);
                         output.accept(ModItems.SYNC_CORE);
+                        output.accept(ModItems.TEST_BLOCK);
+                        output.accept(ModItems.CLONEODITA_ORE);
+                        output.accept(ModItems.RAW_CLONEODITA);
+                        output.accept(ModItems.RAW_CLONEODITA_BLOCK);
+                        output.accept(ModItems.CLONEODITA_INGOT);
                     })
                     .build()
             );
