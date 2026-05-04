@@ -1,6 +1,7 @@
 package com.luky.syncextra.datagen;
 
 import com.luky.syncextra.SyncExtra;
+import com.luky.syncextra.custom.item.util.ModTags;
 import com.luky.syncextra.registry.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -27,5 +28,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES).add(ModBlocks.RAW_CLONEODITA_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.RAW_CLONEODITA_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.RAW_CLONEODITA_WALL.get());
+        tag(ModTags.Blocks.NEEDS_CLONEODITA_TOOL)
+                .add(ModBlocks.RAW_CLONEODITA_BLOCK.get())
+                .add(ModBlocks.TEST_BLOCK.get());
+        tag(ModTags.Blocks.INCORRECT_FOR_CLONEODITA_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_CLONEODITA_TOOL);
     }
 }

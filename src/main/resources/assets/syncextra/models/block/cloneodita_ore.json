@@ -4,20 +4,20 @@
 	"parent": "block/block",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "syncextra:item/cloneodita_ore",
-		"particle": "syncextra:item/cloneodita_ore"
+		"1": "syncextra:block/cloneodita_ore",
+		"particle": "syncextra:block/cloneodita_ore"
 	},
 	"elements": [
 		{
 			"from": [0, 0, 0],
 			"to": [16, 16, 16],
 			"faces": {
-				"north": {"uv": [0, 0, 8, 8], "texture": "#0", "cullface": "north"},
-				"east": {"uv": [0, 0, 8, 8], "texture": "#0", "cullface": "east"},
-				"south": {"uv": [0, 0, 8, 8], "texture": "#0", "cullface": "south"},
-				"west": {"uv": [0, 0, 8, 8], "texture": "#0", "cullface": "west"},
-				"up": {"uv": [0, 0, 8, 8], "texture": "#0", "cullface": "up"},
-				"down": {"uv": [0, 0, 8, 8], "texture": "#0", "cullface": "down"}
+				"north": {"uv": [0, 0, 8, 8], "texture": "#1", "cullface": "north"},
+				"east": {"uv": [0, 0, 8, 8], "texture": "#1", "cullface": "east"},
+				"south": {"uv": [0, 0, 8, 8], "texture": "#1", "cullface": "south"},
+				"west": {"uv": [0, 0, 8, 8], "texture": "#1", "cullface": "west"},
+				"up": {"uv": [0, 0, 8, 8], "texture": "#1", "cullface": "up"},
+				"down": {"uv": [0, 0, 8, 8], "texture": "#1", "cullface": "down"}
 			}
 		}
 	]

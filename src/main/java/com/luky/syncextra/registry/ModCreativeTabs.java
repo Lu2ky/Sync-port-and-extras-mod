@@ -38,6 +38,13 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.RAW_CLONEODITA_PRESSURE_PLATE);
                         output.accept(ModBlocks.RAW_CLONEODITA_FENCE);
                         output.accept(ModBlocks.CLONEODITA_LAMP);
+                        output.accept(ModItems.CLONEODITA_SWORD);
+                        output.accept(ModItems.CLONEODITA_AXE);
+                        output.accept(ModItems.CLONEODITA_PICKAXE);
+                        output.accept(ModItems.CLONEODITA_HOE);
+                        output.accept(ModItems.CLONEODITA_SHOVEL);
+
+
 
 
                     })

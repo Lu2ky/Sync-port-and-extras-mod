@@ -20,7 +20,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //blockWithItem(ModBlocks.CLONEODITA_ORE);
+        blockWithItem(ModBlocks.CLONEODITA_ORE);
         blockWithItem(ModBlocks.RAW_CLONEODITA_BLOCK);
         //blockWithItem(ModBlocks.TEST_BLOCK);
         addNonCloneoditaBlocks();

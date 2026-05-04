@@ -53,10 +53,10 @@ public class TestBlockEntity extends RandomizableContainerBlockEntity {
                 entity.setChanged();
             }
         }
-
-        Convierte items instancias de cloneodita_ingot si y solo si estan en un rango de 2 bloques de test_block, correspondencia
-        1:2 con netherite_ingot
-
+    */
+        //Convierte items instancias de cloneodita_ingot si y solo si estan en un rango de 2 bloques de test_block, correspondencia
+        //1:2 con netherite_ingot
+/*
         level.getEntitiesOfClass(ItemEntity.class,
                 new AABB(pos).inflate(2.0)
         ).forEach(itemEntity -> {
@@ -68,7 +68,7 @@ public class TestBlockEntity extends RandomizableContainerBlockEntity {
             }
         });
 
-         */
+*/
     }
 
     @Override

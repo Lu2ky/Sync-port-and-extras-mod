@@ -6,6 +6,7 @@ import com.luky.syncextra.registry.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.fml.common.Mod;
@@ -26,5 +27,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.CLONEODITA_INGOT.get())
                 .add(ModItems.CHISEL.get())
                 .add(Items.COAL);
+        tag(ItemTags.SWORDS)
+                .add(ModItems.CLONEODITA_SWORD.get());
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.CLONEODITA_PICKAXE.get());
+        tag(ItemTags.AXES)
+                .add(ModItems.CLONEODITA_AXE.get());
+        tag(ItemTags.HOES)
+                .add(ModItems.CLONEODITA_HOE.get());
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.CLONEODITA_SHOVEL.get());
     }
 }
