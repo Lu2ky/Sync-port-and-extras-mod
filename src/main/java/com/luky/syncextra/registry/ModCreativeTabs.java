@@ -43,6 +43,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.CLONEODITA_PICKAXE);
                         output.accept(ModItems.CLONEODITA_HOE);
                         output.accept(ModItems.CLONEODITA_SHOVEL);
+                        output.accept(ModItems.CLONEODITA_HAMMER);
 
 
 

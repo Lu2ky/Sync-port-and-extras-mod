@@ -4,6 +4,7 @@ package com.luky.syncextra.registry;
 import com.jcraft.jorbis.Block;
 import com.luky.syncextra.SyncExtra;
 import com.luky.syncextra.custom.item.ChiselItem;
+import com.luky.syncextra.custom.item.Hammer;
 import com.luky.syncextra.custom.item.ModToolTiers;
 import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -48,4 +49,9 @@ public class ModItems{
     public static final DeferredItem<HoeItem>  CLONEODITA_HOE = ITEMS.register("cloneodita_hoe",
             () -> new HoeItem(ModToolTiers.CLONEODITA, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.CLONEODITA,34F,-3.0f))));
+    public static final DeferredItem<Hammer> CLONEODITA_HAMMER = ITEMS.register("cloneodita_hammer",
+            () -> new Hammer(ModToolTiers.CLONEODITA, new Item.Properties().attributes(PickaxeItem.createAttributes(
+                    ModToolTiers.CLONEODITA,
+                    18F,
+                    -3.5F))));
 }

@@ -19,6 +19,8 @@ public class Hammer extends DiggerItem {
     public Hammer(Tier tier, Properties properties) {
         super(tier, BlockTags.MINEABLE_WITH_PICKAXE, properties);
     }
+
+
     public static List<BlockPos> getAreatobeDestroyed(int range, BlockPos centerblock, ServerPlayer player){
         List<BlockPos> positionsToBeDestroyed = new ArrayList<>();
         BlockHitResult centerBlock = player.level().clip(new ClipContext(player.getEyePosition(1f),
@@ -28,24 +30,24 @@ public class Hammer extends DiggerItem {
             return positionsToBeDestroyed;
         }
         if(centerBlock.getDirection() == Direction.DOWN || centerBlock.getDirection() == Direction.UP){
-            for (int x = -range; x < range; x++) {
-                for (int y = -range; y < range; y++) {
+            for (int x = -range; x <= range; x++) {
+                for (int y = -range; y <= range; y++) {
                     positionsToBeDestroyed.add(new BlockPos(centerblock.getX() + x, centerblock.getY(), centerblock.getZ() + y));
                 }
                 
             }
         }
         if(centerBlock.getDirection() == Direction.NORTH || centerBlock.getDirection() == Direction.SOUTH){
-            for (int x = -range; x < range; x++) {
-                for (int y = -range; y < range; y++) {
+            for (int x = -range; x <= range; x++) {
+                for (int y = -range; y <= range; y++) {
                     positionsToBeDestroyed.add(new BlockPos(centerblock.getX() + x, centerblock.getY() + y, centerblock.getZ()));
                 }
 
             }
         }
         if(centerBlock.getDirection() == Direction.EAST || centerBlock.getDirection() == Direction.WEST){
-            for (int x = -range; x < range; x++) {
-                for (int y = -range; y < range; y++) {
+            for (int x = -range; x <= range; x++) {
+                for (int y = -range; y <= range; y++) {
                     positionsToBeDestroyed.add(new BlockPos(centerblock.getX() , centerblock.getY() + y, centerblock.getZ() + x));
                 }
 
